@@ -1,22 +1,22 @@
 class CashRegister
   
-  attr_accessor :total, :discount, :item, :last_amount
+  attr_accessor :total, :discount, :items, :last_amount
 
   def initialize(discount = 0.0)
     @total = 0 
     @discount = discount
-    @item = []
+    @items = []
   end
   
   def add_item(item, cost, quantity = 1)
     if quantity > 1 
       i = 0 
       while i < quantity
-        @item << item
+        @items << item
         i += 1 
       end 
     else 
-      @item << item
+      @items << item
     end 
     @total += quantity*cost
     @last_amount = total

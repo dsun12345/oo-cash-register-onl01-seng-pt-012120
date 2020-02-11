@@ -10,10 +10,16 @@ class CashRegister
   def add_item(item, cost, quantity = 0)
     if quantity > 1 
       i = 0 
-      while 
-      
-    
-    
+      while i < quantity
+        @item << item
+        i += 1 
+      end 
+    else 
+      @item << item
+    end 
+    @total = quantity*cost
+    @last_amount = total
+    @total
   end
   
   

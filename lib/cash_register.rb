@@ -18,7 +18,7 @@ class CashRegister
     else 
       @item << item
     end 
-    @total = quantity*cost
+    @total += quantity*cost
     @last_amount = total
     @total
   end
